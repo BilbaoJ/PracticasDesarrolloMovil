@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/fondo">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="800dp"
+        android:layout_height="600dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Tipo de vehiculo"
+            android:textColor="@color/purple_200"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rgOpciones"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <RadioButton
+                android:id="@+id/rbSedan"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Sedan"
+                >
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbCamion"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Camion">
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbCarrito"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Carrito">
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbDeportivo"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Deportivo">
+
+            </RadioButton>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="Lujos"
+            android:textColor="@color/purple_200"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/chkLuces"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Luces de neon">
+
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/chkVentanaP"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Ventana polarizada">
+
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/chkSuspension"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Suspension alta">
+
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/chkSonido"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Sonido">
+
+        </CheckBox>
+
+        <Button
+            android:id="@+id/btnFactura"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="20dp"
+            android:text="Generar Factura" />
+
+    </LinearLayout>
+
+</RelativeLayout>
