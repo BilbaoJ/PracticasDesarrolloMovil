@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".AdminActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/admin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvInfo"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:text="Ingrese nuevas preguntas"/>
+
+    </GridLayout>
+
+
+    <EditText
+        android:id="@+id/etPregunta"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Ingrese la pregunta"
+        android:minHeight="48dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etOpcion1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Ingrese la primera opcion"
+        android:minHeight="48dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etOpcion2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Ingrese la segunda opcion"
+        android:minHeight="48dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etOpcionCorrecta"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Ingrese la opcion correcta"
+        android:minHeight="48dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etPuntaje"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Ingrese el puntaje de la pregunta"
+        android:minHeight="48dp"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Guardar"
+        android:id="@+id/btnGuardar"
+        android:layout_gravity="center" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvPreguntas"/>
+
+</LinearLayout>

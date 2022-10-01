@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvInfo"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPregunta"
+        android:layout_gravity="center"
+        android:hint="Ingrese la pregunta"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRes1"
+        android:layout_gravity="center"
+        android:hint="Ingrese la primer respuesta"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRes2"
+        android:layout_gravity="center"
+        android:hint="Ingrese la segunda respuesta"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRes3"
+        android:layout_gravity="center"
+        android:hint="Ingrese la tercera respuesta"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etResCorrecta"
+        android:layout_gravity="center"
+        android:hint="Ingrese la respuesta correcta"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:id="@+id/btnGuardar"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
