@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvContactos;
     ArrayList<String> misContactos = new ArrayList<>();
     ArrayList<Contactos> misContactosC = new ArrayList<>();
-    ArrayAdapter adapter;
+    ArrayAdapter<String> adapter;
     String strNombre, strApellido, strCorreo;
     int intEstatura;
     int elementoE;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 elementoE = i;
+                btnEliminar.setVisibility(View.VISIBLE);
                 Toast.makeText(getApplicationContext(), "Contacto seleccionado", Toast.LENGTH_LONG).show();
             }
         });
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                 adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, misContactos);
                 lvContactos.setAdapter(adapter);
+                limpiarCampos();
                 Toast.makeText(getApplicationContext(), "Contacto Agregado", Toast.LENGTH_LONG).show();
             }
 
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 calcularPromedio();
                 adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, misContactos);
                 lvContactos.setAdapter(adapter);
+                btnEliminar.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(), "Contacto Eliminado", Toast.LENGTH_LONG).show();
             }
         });
@@ -93,10 +96,32 @@ public class MainActivity extends AppCompatActivity {
                 Intent I = new Intent(getApplicationContext(), Estadisticas.class);
                 calcularPromedio();
                 I.putExtra("promedio", promedio);
+
+                ArrayList<String> altos = encontrarContactosAltos();
+                I.putExtra("contactosAltos", altos);
+
                 startActivity(I);
             }
         });
 
+    }
+
+    private ArrayList<String> encontrarContactosAltos(){
+
+        ArrayList<String> contactosAltos = new ArrayList<>();
+        for(Contactos contacto: misContactosC){
+            if (contacto.getIntEstatura() >= promedio){
+                contactosAltos.add(contacto.toString());
+            }
+        };
+        return  contactosAltos;
+    }
+
+    private void limpiarCampos(){
+        etNombre.setText("");
+        etApellido.setText("");
+        etCorreo.setText("");
+        etEstatura.setText("");
     }
 
 
@@ -107,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
                 suma += contacto.getIntEstatura();
             };
             promedio = suma / misContactosC.size();
+        }else {
+            promedio = 0;
         }
 
     }

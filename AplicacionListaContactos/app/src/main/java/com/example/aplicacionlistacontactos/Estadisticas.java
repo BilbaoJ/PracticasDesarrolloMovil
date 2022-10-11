@@ -14,8 +14,7 @@ public class Estadisticas extends AppCompatActivity {
     TextView tvEstaturaProm;
     ListView lvMasAltos;
     ArrayList<String> clientesAltos = new ArrayList<>();
-    ArrayList<String> clientes = new ArrayList<>();
-    ArrayAdapter adapter;
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,15 @@ public class Estadisticas extends AppCompatActivity {
 
         Bundle paqueteInfo = getIntent().getExtras();
         if (paqueteInfo != null){
-            int res = paqueteInfo.getInt("promedio");
-            tvEstaturaProm.setText(String.valueOf(res));
+            int respuesta = paqueteInfo.getInt("promedio");
+            String estaturaPromedio = respuesta + "cm";
+            tvEstaturaProm.setText(estaturaPromedio);
+
+            clientesAltos = paqueteInfo.getStringArrayList("contactosAltos");
+
+            adapter = new ArrayAdapter<String>(getApplicationContext(),
+                    android.R.layout.simple_list_item_1, clientesAltos);
+            lvMasAltos.setAdapter(adapter);
         }
     }
 
