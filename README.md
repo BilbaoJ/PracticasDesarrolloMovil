@@ -29,6 +29,12 @@ Prácticas de clase sobre conocimientos básicos del desarrollo móvil con java 
 9. ### *App cuestionario v2.0.0*
 > Juego de preguntas haciendo el manejo de los datos con archivo plano y shared preferences
 
-10. ### *App CRUD*
+10. ### *App cuestionario v2.0.0*
+> Juego de preguntas haciendo el manejo de los datos con SQLite
+
+11. ### *App CRUD*
 > Manejo de datos con SQLite
+
+12. ### *App Async*
+> Manejo de threads
 
