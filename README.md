@@ -29,15 +29,18 @@ Prácticas de clase sobre conocimientos básicos del desarrollo móvil con java 
 9. ### *App cuestionario v2.0.0*
 > Juego de preguntas haciendo el manejo de los datos con archivo plano y shared preferences
 
-10. ### *App cuestionario v2.0.0*
-> Juego de preguntas haciendo el manejo de los datos con SQLite
+10. ### *Industrias M*
+> Practica básica de manejo de SQL
 
 11. ### *App CRUD*
 > Manejo de datos con SQLite
 
-12. ### *App Async*
+12. ### *App cuestionario v3.0.0*
+> Juego de preguntas haciendo el manejo de los datos con SQLite
+
+13. ### *App Async*
 > Manejo de threads
 
-13. ### *App CRUD con FireBase*
+14. ### *App CRUD con FireBase*
 > Manejo de datos con "realtime database"
 
